@@ -95,10 +95,9 @@ public class Case1 extends CSP<Variable, String>{
 		super(allVar);
 		
 		Domain<String> atividades = new Domain<>(
-				COMP0408, COMP0455, COMP0481, PIBIC, VAZIO, 
-				VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO,
-				VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO,
-				VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO
+				COMP0408, COMP0455, COMP0481, PIBIC, VAZIO,
+				VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO,
+				VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO	
 		);
 		
 		for (Variable var : getVariables())
@@ -140,11 +139,10 @@ public class Case1 extends CSP<Variable, String>{
 		addConstraint(new UnaryConstraint(H5T5, PIBIC));
 		addConstraint(new UnaryConstraint(H5T6, PIBIC));
 		
-		
-		// APAGAR ESSAS DAQUI DE BAIXO E USAR DE VOLUME
-		// Restrição de serem todos diferentes
-		// addConstraint(new DifAllConstraint(allVar));
-		// Restrição de todas as atividades estarem realmente na solução (não adicionar mais vazio que necessário)
-		// addConstraint(new AllActivitiesConstraint(allVar, efectiveDomain));
+		// Restrições de volume
+		addConstraint(new VolumeConstraint(allVar, COMP0455, 4));
+		addConstraint(new VolumeConstraint(allVar, COMP0408, 4));
+		addConstraint(new VolumeConstraint(allVar, COMP0481, 2));
+		addConstraint(new VolumeConstraint(allVar, PIBIC, 20));
 	}
 }

@@ -258,7 +258,7 @@ public class Main {
 		CspSolver<Variable, String> solver;
 		Optional<Assignment<Variable, String>> solution;
 		
-		solver = new MinConflictsSolver<>(1000);
+		solver = new MinConflictsSolver<>(100000);
 		solver.addCspListener(stepCounter);
 		stepCounter.reset();
 		System.out.println("Classes scheduling (Minimum Conflicts)");
