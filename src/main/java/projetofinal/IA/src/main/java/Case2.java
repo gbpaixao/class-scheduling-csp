@@ -1,10 +1,13 @@
 package projetofinal.IA.src.main.java;
+
 import java.util.Arrays;
 import java.util.List;
 
-import aima.core.search.csp.*;
+import aima.core.search.csp.CSP;
+import aima.core.search.csp.Domain;
+import aima.core.search.csp.Variable;
 
-public class Case1 extends CSP<Variable, String>{
+public class Case2 extends CSP<Variable, String> {
 	
 	/* Definição de variáveis */
 	public static Variable H2T1 = new Variable("H2T1");
@@ -82,24 +85,30 @@ public class Case1 extends CSP<Variable, String>{
 	);
 	
 	/* Definição das constantes que serão o domínio */ 
-	public static String COMP0455 = new String("COMP0455");
-	public static String COMP0481 = new String("COMP0481");
+	public static String COMP0409 = new String("COMP0409");
+	public static String COMP0438 = new String("COMP0438");
+	public static String COMP0412 = new String("COMP0412");
 	public static String COMP0408 = new String("COMP0408");
-	public static String PIBIC = new String("PIBIC");
-	public static String ESCOMP0455 = new String("ESCOMP0455");
-	public static String ESCOMP0481 = new String("ESCOMP0481");
+	public static String COMP0461 = new String("COMP0461");
+
+	public static String ESCOMP0409 = new String("ESCOMP0409");
+	public static String ESCOMP0438 = new String("ESCOMP0438");
+	public static String ESCOMP0412 = new String("ESCOMP0412");
 	public static String ESCOMP0408 = new String("ESCOMP0408");
+	public static String ESCOMP0461 = new String("ESCOMP0461");
+	
 	public static String VAZIO = new String("  ---  ");
 	
 	
-	/* Tem 3 disciplinas e faz PIBIC */
-	public Case1() {
+	/* Tem 5 disciplinas */
+	public Case2() {
 		// Criação das variáveis
 		super(allVar);
 		
 		Domain<String> atividades = new Domain<>(
-				COMP0408, COMP0455, COMP0481, PIBIC, ESCOMP0455,
-				ESCOMP0481, ESCOMP0408, VAZIO
+				COMP0409, COMP0438, COMP0412, COMP0408, COMP0461, 
+				ESCOMP0409, ESCOMP0438, ESCOMP0412, ESCOMP0408, ESCOMP0461,
+				VAZIO, VAZIO, VAZIO, VAZIO
 		);
 		
 		for (Variable var : getVariables())
@@ -107,44 +116,43 @@ public class Case1 extends CSP<Variable, String>{
 		
 		/* RESTRIÇÕES */
 		// Restrições Unárias
-		addConstraint(new UnaryConstraint(H3T3, COMP0455));
-		addConstraint(new UnaryConstraint(H3T4, COMP0455));
-		addConstraint(new UnaryConstraint(H5T3, COMP0455));
-		addConstraint(new UnaryConstraint(H5T4, COMP0455));
-		addConstraint(new UnaryConstraint(H5N1, COMP0481));
-		addConstraint(new UnaryConstraint(H5N2, COMP0481));
-		addConstraint(new UnaryConstraint(H2N3, COMP0408));
-		addConstraint(new UnaryConstraint(H2N4, COMP0408));
-		addConstraint(new UnaryConstraint(H4N3, COMP0408));
-		addConstraint(new UnaryConstraint(H4N4, COMP0408));
-		addConstraint(new UnaryConstraint(H2T1, PIBIC));
-		addConstraint(new UnaryConstraint(H2T2, PIBIC));
-		addConstraint(new UnaryConstraint(H2T3, PIBIC));
-		addConstraint(new UnaryConstraint(H2T4, PIBIC));
-		addConstraint(new UnaryConstraint(H2T5, PIBIC));
-		addConstraint(new UnaryConstraint(H2T6, PIBIC));
-		addConstraint(new UnaryConstraint(H4T1, PIBIC));
-		addConstraint(new UnaryConstraint(H4T2, PIBIC));
-		addConstraint(new UnaryConstraint(H4T3, PIBIC));
-		addConstraint(new UnaryConstraint(H4T4, PIBIC));
-		addConstraint(new UnaryConstraint(H4T5, PIBIC));
-		addConstraint(new UnaryConstraint(H4T6, PIBIC));
-		addConstraint(new UnaryConstraint(H6T1, PIBIC));
-		addConstraint(new UnaryConstraint(H6T2, PIBIC));
-		addConstraint(new UnaryConstraint(H6T3, PIBIC));
-		addConstraint(new UnaryConstraint(H6T4, PIBIC));
-		addConstraint(new UnaryConstraint(H6T5, PIBIC));
-		addConstraint(new UnaryConstraint(H6T6, PIBIC));
-		addConstraint(new UnaryConstraint(H5T5, PIBIC));
-		addConstraint(new UnaryConstraint(H5T6, PIBIC));
+		addConstraint(new UnaryConstraint(H2T1, COMP0409));
+		addConstraint(new UnaryConstraint(H2T2, COMP0409));
+		addConstraint(new UnaryConstraint(H4T1, COMP0409));
+		addConstraint(new UnaryConstraint(H4T2, COMP0409));
+		
+		addConstraint(new UnaryConstraint(H6T1, COMP0438));
+		addConstraint(new UnaryConstraint(H6T2, COMP0438));
+		addConstraint(new UnaryConstraint(H6T3, COMP0438));
+		addConstraint(new UnaryConstraint(H6T4, COMP0438));
+		
+		addConstraint(new UnaryConstraint(H3T3, COMP0412));
+		addConstraint(new UnaryConstraint(H3T4, COMP0412));
+		addConstraint(new UnaryConstraint(H5T3, COMP0412));
+		addConstraint(new UnaryConstraint(H5T4, COMP0412));
+		
+		addConstraint(new UnaryConstraint(H2T5, COMP0408));
+		addConstraint(new UnaryConstraint(H2T6, COMP0408));
+		addConstraint(new UnaryConstraint(H4T5, COMP0408));
+		addConstraint(new UnaryConstraint(H4T6, COMP0408));
+		
+		addConstraint(new UnaryConstraint(H2N2, COMP0461));
+		addConstraint(new UnaryConstraint(H2N3, COMP0461));
+		addConstraint(new UnaryConstraint(H4N2, COMP0461));
+		addConstraint(new UnaryConstraint(H4N3, COMP0461));
 		
 		// Restrições de volume
-		addConstraint(new VolumeConstraint(allVar, COMP0455, 4));
+		addConstraint(new VolumeConstraint(allVar, COMP0409, 4));
+		addConstraint(new VolumeConstraint(allVar, COMP0438, 4));
+		addConstraint(new VolumeConstraint(allVar, COMP0412, 4));
 		addConstraint(new VolumeConstraint(allVar, COMP0408, 4));
-		addConstraint(new VolumeConstraint(allVar, COMP0481, 2));
-		addConstraint(new VolumeConstraint(allVar, PIBIC, 20));
-		addConstraint(new VolumeConstraint(allVar, ESCOMP0455, 4));
+		addConstraint(new VolumeConstraint(allVar, COMP0461, 4));
+		
+		addConstraint(new VolumeConstraint(allVar, ESCOMP0409, 2));
+		addConstraint(new VolumeConstraint(allVar, ESCOMP0438, 2));
+		addConstraint(new VolumeConstraint(allVar, ESCOMP0412, 2));
 		addConstraint(new VolumeConstraint(allVar, ESCOMP0408, 2));
-		addConstraint(new VolumeConstraint(allVar, ESCOMP0481, 2));
+		addConstraint(new VolumeConstraint(allVar, ESCOMP0461, 2));
 	}
+
 }

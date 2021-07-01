@@ -28,11 +28,6 @@ public class VolumeConstraint implements Constraint<Variable, String> {
 
 		int counter = 0;
 		for(Variable variable: scope) {
-//			System.out.println("var(value): " + assignment.getValue(variable));
-//			System.out.println("domain: " + domain);
-//			System.out.println("equals: " + assignment.getValue(variable).equals(domain));
-//			System.out.println("=: " + assignment.getValue(variable) == domain);
-//			System.out.println("counter :" + counter);
 			if (assignment.getValue(variable).equals(domain)) {
 				counter++;
 			}
