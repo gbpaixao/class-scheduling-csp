@@ -11,6 +11,8 @@ import aima.core.search.csp.solver.MinConflictsSolver;
 
 public class Main {
 	
+	static int retry = 1;
+	
 	public static void main(String[] args) {
 		CSP<Variable, String> csp = new Case1();
 		CspListener.StepCounter<Variable, String> stepCounter = new CspListener.StepCounter<>();
@@ -28,6 +30,10 @@ public class Main {
 		DrawTimetable drawTimetable = new DrawTimetable();
 		if(!solution.isEmpty()) {
 			drawTimetable.draw(solution.get());
+		} else {
+			retry++;
+			System.out.println("Tentativa "+ retry +":");
+			main(args);
 		}
 	}
 }

@@ -86,6 +86,9 @@ public class Case1 extends CSP<Variable, String>{
 	public static String COMP0481 = new String("COMP0481");
 	public static String COMP0408 = new String("COMP0408");
 	public static String PIBIC = new String("PIBIC");
+	public static String ESCOMP0455 = new String("ESCOMP0455");
+	public static String ESCOMP0481 = new String("ESCOMP0481");
+	public static String ESCOMP0408 = new String("ESCOMP0408");
 	public static String VAZIO = new String("  ---  ");
 	
 	/* Faz PIBIC e tem 3 disciplinas */
@@ -94,9 +97,8 @@ public class Case1 extends CSP<Variable, String>{
 		super(allVar);
 		
 		Domain<String> atividades = new Domain<>(
-				COMP0408, COMP0455, COMP0481, PIBIC, VAZIO,
-				VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO,
-				VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO, VAZIO	
+				COMP0408, COMP0455, COMP0481, PIBIC, ESCOMP0455,
+				ESCOMP0481, ESCOMP0408, VAZIO
 		);
 		
 		for (Variable var : getVariables())
@@ -140,5 +142,8 @@ public class Case1 extends CSP<Variable, String>{
 		addConstraint(new VolumeConstraint(allVar, COMP0408, 4));
 		addConstraint(new VolumeConstraint(allVar, COMP0481, 2));
 		addConstraint(new VolumeConstraint(allVar, PIBIC, 20));
+		addConstraint(new VolumeConstraint(allVar, ESCOMP0455, 4));
+		addConstraint(new VolumeConstraint(allVar, ESCOMP0408, 2));
+		addConstraint(new VolumeConstraint(allVar, ESCOMP0481, 2));
 	}
 }

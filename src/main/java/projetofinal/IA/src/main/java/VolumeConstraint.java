@@ -37,9 +37,8 @@ public class VolumeConstraint implements Constraint<Variable, String> {
 				counter++;
 			}
 		}
-		
-//		System.out.println("counter :" + counter);
-		if(counter <= this.counter) return true;
+
+		if(counter == this.counter) return true;
 		else return false;
 	}
 
