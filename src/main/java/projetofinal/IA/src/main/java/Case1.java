@@ -1,5 +1,4 @@
 package projetofinal.IA.src.main.java;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -87,7 +86,7 @@ public class Case1 extends CSP<Variable, String>{
 	public static String COMP0481 = new String("COMP0481");
 	public static String COMP0408 = new String("COMP0408");
 	public static String PIBIC = new String("PIBIC");
-	public static String VAZIO = new String("  -  ");
+	public static String VAZIO = new String("  ---  ");
 	
 	/* Faz PIBIC e tem 3 disciplinas */
 	public Case1() {
@@ -102,9 +101,6 @@ public class Case1 extends CSP<Variable, String>{
 		
 		for (Variable var : getVariables())
 			setDomain(var, atividades);
-		
-		//// Lista com domínio sem o espaço "em branco"
-		//List<String> efectiveDomain = Arrays.asList(COMP0408, COMP0455, COMP0481, PIBIC);
 		
 		/* RESTRIÇÕES */
 		// Restrições Unárias
