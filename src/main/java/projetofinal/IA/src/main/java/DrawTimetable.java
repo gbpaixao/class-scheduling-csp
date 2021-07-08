@@ -9,56 +9,86 @@ public class DrawTimetable {
 
 	public void draw(Assignment<Variable, String> solution) {
 		
-		String H2T1 = "";
-		String H3T1 = "";
-		String H4T1 = "";
-		String H5T1 = "";
-		String H6T1 = "";
-		String H2T2 = "";
-		String H3T2 = "";
-		String H4T2 = "";
-		String H5T2 = "";
-		String H6T2 = "";
-		String H2T3 = "";
-		String H3T3 = "";
-		String H4T3 = "";
-		String H5T3 = "";
-		String H6T3 = "";
-		String H2T4 = "";
-		String H3T4 = "";
-		String H4T4 = "";
-		String H5T4 = "";
-		String H6T4 = "";
-		String H2T5 = "";
-		String H3T5 = "";
-		String H4T5 = "";
-		String H5T5 = "";
-		String H6T5 = "";
-		String H2T6 = "";
-		String H3T6 = "";
-		String H4T6 = "";
-		String H5T6 = "";
-		String H6T6 = "";
-		String H2N1 = "";
-		String H2N2 = "";
-		String H2N3 = "";
-		String H2N4 = "";
-		String H3N1 = "";
-		String H3N2 = "";
-		String H3N3 = "";
-		String H3N4 = "";
-		String H4N1 = "";
-		String H4N2 = "";
-		String H4N3 = "";
-		String H4N4 = "";
-		String H5N1 = "";
-		String H5N2 = "";
-		String H5N3 = "";
-		String H5N4 = "";
-		String H6N1 = "";
-		String H6N2 = "";
-		String H6N3 = "";
-		String H6N4 = "";
+		String H2M1 = " --- ";
+		String H3M1 = " --- ";
+		String H4M1 = " --- ";
+		String H5M1 = " --- ";
+		String H6M1 = " --- ";
+		String H2M2 = " --- ";
+		String H3M2 = " --- ";
+		String H4M2 = " --- ";
+		String H5M2 = " --- ";
+		String H6M2 = " --- ";
+		String H2M3 = " --- ";
+		String H3M3 = " --- ";
+		String H4M3 = " --- ";
+		String H5M3 = " --- ";
+		String H6M3 = " --- ";
+		String H2M4 = " --- ";
+		String H3M4 = " --- ";
+		String H4M4 = " --- ";
+		String H5M4 = " --- ";
+		String H6M4 = " --- ";
+		String H2M5 = " --- ";
+		String H3M5 = " --- ";
+		String H4M5 = " --- ";
+		String H5M5 = " --- ";
+		String H6M5 = " --- ";
+		String H2M6 = " --- ";
+		String H3M6 = " --- ";
+		String H4M6 = " --- ";
+		String H5M6 = " --- ";
+		String H6M6 = " --- ";
+		String H2T1 = " --- ";
+		String H3T1 = " --- ";
+		String H4T1 = " --- ";
+		String H5T1 = " --- ";
+		String H6T1 = " --- ";
+		String H2T2 = " --- ";
+		String H3T2 = " --- ";
+		String H4T2 = " --- ";
+		String H5T2 = " --- ";
+		String H6T2 = " --- ";
+		String H2T3 = " --- ";
+		String H3T3 = " --- ";
+		String H4T3 = " --- ";
+		String H5T3 = " --- ";
+		String H6T3 = " --- ";
+		String H2T4 = " --- ";
+		String H3T4 = " --- ";
+		String H4T4 = " --- ";
+		String H5T4 = " --- ";
+		String H6T4 = " --- ";
+		String H2T5 = " --- ";
+		String H3T5 = " --- ";
+		String H4T5 = " --- ";
+		String H5T5 = " --- ";
+		String H6T5 = " --- ";
+		String H2T6 = " --- ";
+		String H3T6 = " --- ";
+		String H4T6 = " --- ";
+		String H5T6 = " --- ";
+		String H6T6 = " --- ";
+		String H2N1 = " --- ";
+		String H2N2 = " --- ";
+		String H2N3 = " --- ";
+		String H2N4 = " --- ";
+		String H3N1 = " --- ";
+		String H3N2 = " --- ";
+		String H3N3 = " --- ";
+		String H3N4 = " --- ";
+		String H4N1 = " --- ";
+		String H4N2 = " --- ";
+		String H4N3 = " --- ";
+		String H4N4 = " --- ";
+		String H5N1 = " --- ";
+		String H5N2 = " --- ";
+		String H5N3 = " --- ";
+		String H5N4 = " --- ";
+		String H6N1 = " --- ";
+		String H6N2 = " --- ";
+		String H6N3 = " --- ";
+		String H6N4 = " --- ";
 		
 		List<Variable> variables = solution.getVariables();
 		
@@ -67,6 +97,66 @@ public class DrawTimetable {
 			String varValue = solution.getValue(variable);
 
 			switch(varName) {
+				case "H2M1": 
+				  H2M1 = varValue; break;
+				case "H3M1": 
+				  H3M1 = varValue; break;
+				case "H4M1": 
+				  H4M1 = varValue; break;
+				case "H5M1": 
+				  H5M1 = varValue; break;
+				case "H6M1": 
+				  H6M1 = varValue; break;
+				case "H2M2": 
+				  H2M2 = varValue; break;
+				case "H3M2": 
+				  H3M2 = varValue; break;
+				case "H4M2": 
+				  H4M2 = varValue; break;
+				case "H5M2": 
+				  H5M2 = varValue; break;
+				case "H6M2": 
+				  H6M2 = varValue; break;
+				case "H2M3": 
+				  H2M3 = varValue; break;
+				case "H3M3": 
+				  H3M3 = varValue; break;
+				case "H4M3": 
+				  H4M3 = varValue; break;
+				case "H5M3": 
+				  H5M3 = varValue; break;
+				case "H6M3": 
+				  H6M3 = varValue; break;
+				case "H2M4": 
+				  H2M4 = varValue; break;
+				case "H3M4": 
+				  H3M4 = varValue; break;
+				case "H4M4": 
+				  H4M4 = varValue; break;
+				case "H5M4": 
+				  H5M4 = varValue; break;
+				case "H6M4": 
+				  H6M4 = varValue; break;
+				case "H2M5": 
+				  H2M5 = varValue; break;
+				case "H3M5": 
+				  H3M5 = varValue; break;
+				case "H4M5": 
+				  H4M5 = varValue; break;
+				case "H5M5": 
+				  H5M5 = varValue; break;
+				case "H6M5": 
+				  H6M5 = varValue; break;
+				case "H2M6": 
+				  H2M6 = varValue; break;
+				case "H3M6": 
+				  H3M6 = varValue; break;
+				case "H4M6": 
+				  H4M6 = varValue; break;
+				case "H5M6": 
+				  H5M6 = varValue; break;
+				case "H6M6": 
+				  H6M6 = varValue; break;
 				case "H2T1": 
 				  H2T1 = varValue; break;
 				case "H3T1": 
@@ -174,6 +264,48 @@ public class DrawTimetable {
 		StringBuilder timetable = new StringBuilder();
 		
 		timetable.append("   Horários    | Segunda |  Terça  |  Quarta  |  Quinta  |  Sexta  \n");
+		timetable.append("07:00 - 08:00 "); timetable.append(" | ");
+		timetable.append(H2M1); timetable.append(" | ");
+		timetable.append(H3M1); timetable.append(" | ");
+		timetable.append(H4M1); timetable.append(" | ");
+		timetable.append(H5M1); timetable.append(" | ");
+		timetable.append(H6M1); timetable.append("\n");
+
+		timetable.append("08:00 - 09:00 "); timetable.append(" | ");
+		timetable.append(H2M2); timetable.append(" | ");
+		timetable.append(H3M2); timetable.append(" | ");
+		timetable.append(H4M2); timetable.append(" | ");
+		timetable.append(H5M2); timetable.append(" | ");
+		timetable.append(H6M2); timetable.append("\n");
+
+		timetable.append("09:00 - 10:00 "); timetable.append(" | ");
+		timetable.append(H2M3); timetable.append(" | ");
+		timetable.append(H3M3); timetable.append(" | ");
+		timetable.append(H4M3); timetable.append(" | ");
+		timetable.append(H5M3); timetable.append(" | ");
+		timetable.append(H6M3); timetable.append("\n");
+
+		timetable.append("10:00 - 11:00 "); timetable.append(" | ");
+		timetable.append(H2M4); timetable.append(" | ");
+		timetable.append(H3M4); timetable.append(" | ");
+		timetable.append(H4M4); timetable.append(" | ");
+		timetable.append(H5M4); timetable.append(" | ");
+		timetable.append(H6M4); timetable.append("\n");
+
+		timetable.append("11:00 - 12:00 "); timetable.append(" | ");
+		timetable.append(H2M5); timetable.append(" | ");
+		timetable.append(H3M5); timetable.append(" | ");
+		timetable.append(H4M5); timetable.append(" | ");
+		timetable.append(H5M5); timetable.append(" | ");
+		timetable.append(H6M5); timetable.append("\n");
+
+		timetable.append("12:00 - 13:00 "); timetable.append(" | ");
+		timetable.append(H2M6); timetable.append(" | ");
+		timetable.append(H3M6); timetable.append(" | ");
+		timetable.append(H4M6); timetable.append(" | ");
+		timetable.append(H5M6); timetable.append(" | ");
+		timetable.append(H6M6); timetable.append("\n");
+		
 		timetable.append("13:00 - 14:00 "); timetable.append(" | ");
 		timetable.append(H2T1); timetable.append(" | ");
 		timetable.append(H3T1); timetable.append(" | ");
