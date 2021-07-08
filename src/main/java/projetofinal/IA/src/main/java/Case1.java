@@ -81,7 +81,7 @@ public class Case1 extends CSP<Variable, String>{
 			H6N1, H6N2, H6N3, H6N4
 	);
 	
-	/* Definição das constantes que serão o domínio */ 
+	/* Definição das atividades */ 
 	public static String COMP0455 = new String("COMP0455");
 	public static String COMP0481 = new String("COMP0481");
 	public static String COMP0408 = new String("COMP0408");

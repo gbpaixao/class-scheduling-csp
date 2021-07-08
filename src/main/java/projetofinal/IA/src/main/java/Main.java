@@ -15,8 +15,8 @@ public class Main {
 	
 	public static void main(String[] args) {
 //		CSP<Variable, String> csp = new Case1();
-		CSP<Variable, String> csp = new Case2();
-//		CSP<Variable, String> csp = new Case3();
+//		CSP<Variable, String> csp = new Case2();
+		CSP<Variable, String> csp = new Case3();
 		CspListener.StepCounter<Variable, String> stepCounter = new CspListener.StepCounter<>();
 		CspSolver<Variable, String> solver;
 		Optional<Assignment<Variable, String>> solution;
