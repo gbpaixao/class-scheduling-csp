@@ -10,6 +10,36 @@ import aima.core.search.csp.Variable;
 public class Case2 extends CSP<Variable, String> {
 	
 	/* Definição de variáveis */
+	public static Variable H2M1 = new Variable("H2M1");
+	public static Variable H2M2 = new Variable("H2M2");
+	public static Variable H2M3 = new Variable("H2M3");
+	public static Variable H2M4 = new Variable("H2M4");
+	public static Variable H2M5 = new Variable("H2M5");
+
+	public static Variable H3M1 = new Variable("H3M1");
+	public static Variable H3M2 = new Variable("H3M2");
+	public static Variable H3M3 = new Variable("H3M3");
+	public static Variable H3M4 = new Variable("H3M4");
+	public static Variable H3M5 = new Variable("H3M5");
+
+	public static Variable H4M1 = new Variable("H4M1");
+	public static Variable H4M2 = new Variable("H4M2");
+	public static Variable H4M3 = new Variable("H4M3");
+	public static Variable H4M4 = new Variable("H4M4");
+	public static Variable H4M5 = new Variable("H4M5");
+
+	public static Variable H5M1 = new Variable("H5M1");
+	public static Variable H5M2 = new Variable("H5M2");
+	public static Variable H5M3 = new Variable("H5M3");
+	public static Variable H5M4 = new Variable("H5M4");
+	public static Variable H5M5 = new Variable("H5M5");
+	
+	public static Variable H6M1 = new Variable("H6M1");
+	public static Variable H6M2 = new Variable("H6M2");
+	public static Variable H6M3 = new Variable("H6M3");
+	public static Variable H6M4 = new Variable("H6M4");
+	public static Variable H6M5 = new Variable("H6M5");
+	
 	public static Variable H2T1 = new Variable("H2T1");
 	public static Variable H2T2 = new Variable("H2T2");
 	public static Variable H2T3 = new Variable("H2T3");
@@ -72,6 +102,11 @@ public class Case2 extends CSP<Variable, String> {
 	
 	// Colocando todas as variáveis em uma Lista
 	static List<Variable> allVar = Arrays.asList( 
+			H2M1, H2M2, H2M3, H2M4, H2M5,
+			H3M1, H3M2, H3M3, H3M4, H3M5,
+			H4M1, H4M2, H4M3, H4M4, H4M5,
+			H5M1, H5M2, H5M3, H5M4, H5M5,
+			H6M1, H6M2, H6M3, H6M4, H6M5,
 			H2T1, H2T2, H2T3, H2T4, H2T5, H2T6, 
 			H3T1, H3T2, H3T3, H3T4, H3T5, H3T6, 
 			H4T1, H4T2, H4T3, H4T4, H4T5, H4T6, 
@@ -84,7 +119,7 @@ public class Case2 extends CSP<Variable, String> {
 			H6N1, H6N2, H6N3, H6N4
 	);
 	
-	/* Definição das constantes que serão o domínio */ 
+	/* Definição das atividades */  
 	public static String COMP0409 = new String("COMP0409");
 	public static String COMP0438 = new String("COMP0438");
 	public static String COMP0412 = new String("COMP0412");
@@ -97,6 +132,8 @@ public class Case2 extends CSP<Variable, String> {
 	public static String ESCOMP0408 = new String("ESCOMP0408");
 	public static String ESCOMP0461 = new String("ESCOMP0461");
 	
+	public static String TRABALHO = new String("Trabalho");
+	
 	public static String VAZIO = new String("  ---  ");
 	
 	
@@ -108,6 +145,7 @@ public class Case2 extends CSP<Variable, String> {
 		Domain<String> atividades = new Domain<>(
 				COMP0409, COMP0438, COMP0412, COMP0408, COMP0461, 
 				ESCOMP0409, ESCOMP0438, ESCOMP0412, ESCOMP0408, ESCOMP0461,
+				TRABALHO,
 				VAZIO, VAZIO, VAZIO, VAZIO
 		);
 		
@@ -140,6 +178,36 @@ public class Case2 extends CSP<Variable, String> {
 		addConstraint(new UnaryConstraint(H2N3, COMP0461));
 		addConstraint(new UnaryConstraint(H4N2, COMP0461));
 		addConstraint(new UnaryConstraint(H4N3, COMP0461));
+		
+		addConstraint(new UnaryConstraint(H2M1, TRABALHO));
+		addConstraint(new UnaryConstraint(H2M2, TRABALHO));
+		addConstraint(new UnaryConstraint(H2M3, TRABALHO));
+		addConstraint(new UnaryConstraint(H2M4, TRABALHO));
+		addConstraint(new UnaryConstraint(H2M5, TRABALHO));
+
+		addConstraint(new UnaryConstraint(H3M1, TRABALHO));
+		addConstraint(new UnaryConstraint(H3M2, TRABALHO));
+		addConstraint(new UnaryConstraint(H3M3, TRABALHO));
+		addConstraint(new UnaryConstraint(H3M4, TRABALHO));
+		addConstraint(new UnaryConstraint(H3M5, TRABALHO));
+
+		addConstraint(new UnaryConstraint(H4M1, TRABALHO));
+		addConstraint(new UnaryConstraint(H4M2, TRABALHO));
+		addConstraint(new UnaryConstraint(H4M3, TRABALHO));
+		addConstraint(new UnaryConstraint(H4M4, TRABALHO));
+		addConstraint(new UnaryConstraint(H4M5, TRABALHO));
+
+		addConstraint(new UnaryConstraint(H5M1, TRABALHO));
+		addConstraint(new UnaryConstraint(H5M2, TRABALHO));
+		addConstraint(new UnaryConstraint(H5M3, TRABALHO));
+		addConstraint(new UnaryConstraint(H5M4, TRABALHO));
+		addConstraint(new UnaryConstraint(H5M5, TRABALHO));
+
+		addConstraint(new UnaryConstraint(H6M1, TRABALHO));
+		addConstraint(new UnaryConstraint(H6M2, TRABALHO));
+		addConstraint(new UnaryConstraint(H6M3, TRABALHO));
+		addConstraint(new UnaryConstraint(H6M4, TRABALHO));
+		addConstraint(new UnaryConstraint(H6M5, TRABALHO));
 		
 		// Restrições de volume
 		addConstraint(new VolumeConstraint(allVar, COMP0409, 4));
