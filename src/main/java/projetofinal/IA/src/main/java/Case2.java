@@ -134,7 +134,7 @@ public class Case2 extends CSP<Variable, String> {
 	
 	public static String TRABALHO = new String("Trabalho");
 	
-	public static String VAZIO = new String("  ---  ");
+	public static String VAZIO = new String("---  ");
 	
 	
 	/* Tem 5 disciplinas */

@@ -89,7 +89,7 @@ public class Case1 extends CSP<Variable, String>{
 	public static String ESCOMP0455 = new String("ESCOMP0455");
 	public static String ESCOMP0481 = new String("ESCOMP0481");
 	public static String ESCOMP0408 = new String("ESCOMP0408");
-	public static String VAZIO = new String("  ---  ");
+	public static String VAZIO = new String("---  ");
 	
 	
 	/* Tem 3 disciplinas e faz PIBIC */

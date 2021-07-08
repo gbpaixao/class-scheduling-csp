@@ -147,7 +147,7 @@ public class Case3 extends CSP<Variable, String>{
 	public static String OUTROS = new String("Outros");
 	public static String PALESTRA = new String("Palestra");
 	
-	public static String VAZIO = new String("  ---  ");
+	public static String VAZIO = new String("---  ");
 	
 	/* Tem 8 disciplinas */
 	public Case3() {
@@ -223,7 +223,7 @@ public class Case3 extends CSP<Variable, String>{
 		addConstraint(new VolumeConstraint(allVar, ESMAT0154, 2));
 		addConstraint(new VolumeConstraint(allVar, ESCOMP0417, 1));
 		
-//		addConstraint(new VolumeConstraint(allVar, OUTROS, 2));
-//		addConstraint(new VolumeConstraint(allVar, PALESTRA, 2));
+		addConstraint(new VolumeConstraint(allVar, OUTROS, 2));
+		addConstraint(new VolumeConstraint(allVar, PALESTRA, 2));
 	}
 }
