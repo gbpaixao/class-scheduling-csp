@@ -9,7 +9,7 @@ import aima.core.search.csp.Variable;
 
 public class Case3 extends CSP<Variable, String>{
 
-	/* Definição de variáveis */
+	/* Definiï¿½ï¿½o de variï¿½veis */
 	
 	public static Variable H2M1 = new Variable("H2M1");
 	public static Variable H2M2 = new Variable("H2M2");
@@ -106,7 +106,7 @@ public class Case3 extends CSP<Variable, String>{
 	public static Variable H6N3 = new Variable("H6N3");
 	public static Variable H6N4 = new Variable("H6N4");
 	
-	// Colocando todas as variáveis em uma Lista
+	// Colocando todas as variï¿½veis em uma Lista
 	static List<Variable> allVar = Arrays.asList( 
 			H2M1, H2M2, H2M3, H2M4, H2M5,
 			H3M1, H3M2, H3M3, H3M4, H3M5,
@@ -125,7 +125,7 @@ public class Case3 extends CSP<Variable, String>{
 			H6N1, H6N2, H6N3, H6N4
 	);
 	
-	/* Definição das atividades */ 
+	/* Definiï¿½ï¿½o das atividades (domÃ­nio) */ 
 	public static String ELET0043 = new String("ELET0043");
 	public static String ESTAT0011 = new String("ESTAT0011");
 	public static String COMP0415 = new String("COMP0415");
@@ -151,7 +151,7 @@ public class Case3 extends CSP<Variable, String>{
 	
 	/* Tem 8 disciplinas */
 	public Case3() {
-		// Criação das variáveis
+		// Criaï¿½ï¿½o das variï¿½veis
 		super(allVar);
 		
 		Domain<String> atividades = new Domain<>(
@@ -166,8 +166,8 @@ public class Case3 extends CSP<Variable, String>{
 		for (Variable var : getVariables())
 			setDomain(var, atividades);
 		
-		/* RESTRIÇÕES */
-		// Restrições Unárias
+		/* RESTRIï¿½ï¿½ES */
+		// Restriï¿½ï¿½es Unï¿½rias
 		addConstraint(new UnaryConstraint(H2T1, ELET0043));
 		addConstraint(new UnaryConstraint(H2T2, ELET0043));
 		
@@ -204,7 +204,7 @@ public class Case3 extends CSP<Variable, String>{
 		addConstraint(new UnaryConstraint(H6T5, COMP0417));
 		addConstraint(new UnaryConstraint(H6T6, COMP0417));
 		
-		// Restrições de volume
+		// Restriï¿½ï¿½es de volume
 		addConstraint(new VolumeConstraint(allVar, ELET0043, 2));
 		addConstraint(new VolumeConstraint(allVar, ESTAT0011, 4));
 		addConstraint(new VolumeConstraint(allVar, COMP0415, 4));

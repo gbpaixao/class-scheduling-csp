@@ -9,7 +9,7 @@ import aima.core.search.csp.Variable;
 
 public class Case2 extends CSP<Variable, String> {
 	
-	/* Definição de variáveis */
+	/* Definiï¿½ï¿½o de variï¿½veis */
 	public static Variable H2M1 = new Variable("H2M1");
 	public static Variable H2M2 = new Variable("H2M2");
 	public static Variable H2M3 = new Variable("H2M3");
@@ -100,7 +100,7 @@ public class Case2 extends CSP<Variable, String> {
 	public static Variable H6N3 = new Variable("H6N3");
 	public static Variable H6N4 = new Variable("H6N4");
 	
-	// Colocando todas as variáveis em uma Lista
+	// Colocando todas as variï¿½veis em uma Lista
 	static List<Variable> allVar = Arrays.asList( 
 			H2M1, H2M2, H2M3, H2M4, H2M5,
 			H3M1, H3M2, H3M3, H3M4, H3M5,
@@ -119,7 +119,7 @@ public class Case2 extends CSP<Variable, String> {
 			H6N1, H6N2, H6N3, H6N4
 	);
 	
-	/* Definição das atividades */  
+	/* Definiï¿½ï¿½o das atividades */  
 	public static String COMP0409 = new String("COMP0409");
 	public static String COMP0438 = new String("COMP0438");
 	public static String COMP0412 = new String("COMP0412");
@@ -139,7 +139,7 @@ public class Case2 extends CSP<Variable, String> {
 	
 	/* Tem 5 disciplinas */
 	public Case2() {
-		// Criação das variáveis
+		// Criaï¿½ï¿½o das variï¿½veis
 		super(allVar);
 		
 		Domain<String> atividades = new Domain<>(
@@ -152,8 +152,8 @@ public class Case2 extends CSP<Variable, String> {
 		for (Variable var : getVariables())
 			setDomain(var, atividades);
 		
-		/* RESTRIÇÕES */
-		// Restrições Unárias
+		/* RESTRIï¿½ï¿½ES */
+		// Restriï¿½ï¿½es Unï¿½rias
 		addConstraint(new UnaryConstraint(H2T1, COMP0409));
 		addConstraint(new UnaryConstraint(H2T2, COMP0409));
 		addConstraint(new UnaryConstraint(H4T1, COMP0409));
@@ -209,7 +209,7 @@ public class Case2 extends CSP<Variable, String> {
 		addConstraint(new UnaryConstraint(H6M4, TRABALHO));
 		addConstraint(new UnaryConstraint(H6M5, TRABALHO));
 		
-		// Restrições de volume
+		// Restriï¿½ï¿½es de volume
 		addConstraint(new VolumeConstraint(allVar, COMP0409, 4));
 		addConstraint(new VolumeConstraint(allVar, COMP0438, 4));
 		addConstraint(new VolumeConstraint(allVar, COMP0412, 4));
@@ -221,6 +221,8 @@ public class Case2 extends CSP<Variable, String> {
 		addConstraint(new VolumeConstraint(allVar, ESCOMP0412, 2));
 		addConstraint(new VolumeConstraint(allVar, ESCOMP0408, 2));
 		addConstraint(new VolumeConstraint(allVar, ESCOMP0461, 2));
+		
+		addConstraint(new VolumeConstraint(allVar, TRABALHO, 25));
 	}
 
 }
